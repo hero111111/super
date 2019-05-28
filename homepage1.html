@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://jp.freepik.com/free-icons/animals">
+    <link rel="stylesheet" href="homepage1.css"> 
+    <title>travel</title>
+</head>
+
+<body　style="margin: 0;">
+<header>
+    <div class="logo">
+        <div class="header-logo">
+            <h1><a href=""><img src="40894.png" width="40" height="40px"></a></h1>
+        </div>
+        <div class="header-togo">
+            <h1 id = "1"><a href=""><img src="108370.png" width="40" height="40"></a></h1>
+            <h1 id = "2"><a href=""><img src="45873.png" width="40" height="40"></a></h1>
+        </div>
+    </div>  
+</header>
+
+<div class="top-wrapper">
+    <div class="message">
+        <h1>旅の過程にこそ価値がある。</h1>
+        <p>目的が重要ではない。何をしたかが重要だ。</p>
+    </div>
+    <div class="button">
+        <button class="text-white bg-dark border border-dark" style="width:134px;">新規登録</button>
+        <p class="text-white">or sign up with</p>
+        <button class="text-white badge-info border border-info" style="width:134px;">Twitter</button>
+        <button class="text-white badge-primary border border-primary" style="width:134px;">Facebook</button>
+    </div>
+    <script type="text/javascript">
+        $('#1,#2, #3,#4,#5,#6,#7,#8,#9,#10').hide();
+    
+        //
+        var services = ['#1','#2','#3','#4','#5','#6','#7','#8','#9','#10'];
+        var nowProcess = 0;
+    
+        //
+        var fadeProcess = function(){
+        //
+        var fadeOutTgt = nowProcess;
+        if(++nowProcess == services.length)nowProcess = 0;
+        var fadeInTgt = nowProcess;
+        //
+        setTimeout(function(){
+            $(services[fadeOutTgt]).fadeOut(1000);
+            setTimeout(function(){
+                $(services[fadeInTgt]).fadeIn();
+                fadeProcess();
+            },1000);
+        },
+        6000);
+        };
+        fadeProcess();
+        </script>
+</div>
+
+<footer class="text-white">
+    &copy;hero.co
+</footer>
+</body>
+</html>
